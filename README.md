@@ -17,13 +17,17 @@ A/B Testing is a controlled experiment comparing two or more variants to determi
 ## Key Concepts
 
 * Data Preprocessing:
-  - Cleaning and structuring raw game data for analysis.
-  - Handling missing values and encoding categorical features.
-* Hypothesis Testing:
-  - Formulating null and alternative hypotheses.
-  - Performing t-tests and chi-square tests for feature comparison.
+  - Handled over 90,000 user records including missing values, duplicates, and outliers using quantile-based filtering and IQR.
+  - Applied boolean encoding to retention metrics and ensured version labeling consistency.
+* Statistical Hypothesis Testing:
+  - Verified normality assumptions using the Shapiro-Wilk test before choosing parametric vs non-parametric tests.
+  - Applied independent t-tests to compare user engagement (game rounds) between control and test groups.
+  - Used Mann–Whitney U test as a non-parametric alternative for skewed distributions.
+* Data Visualization:
+  - Used Seaborn and Matplotlib to create histograms, boxplots, and retention bar charts.
+  - Visualized group distributions before and after outlier removal to communicate data integrity.
 * Results Analysis:
-  - Interpreting p-values and confidence intervals.
+  - Calculated and interpreted p-values and confidence intervals.
   - Making data-driven decisions based on statistical evidence.
 
 ## Results and Insights
